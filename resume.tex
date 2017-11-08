@@ -5,19 +5,18 @@
 \usepackage{arlres2}
 \usepackage{multicol}
 \usepackage{fontawesome}
-%\linespread{1.01}
-   
+\linespread{1.05}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \RequirePackage{soul,colortbl,color}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
 \parskip=1ex
- 
-\parindent=0pt 
+\parindent=0pt
 
-\usepackage[top=0.7in, bottom=0.7in, left=0.8in,
-  right=0.8in]{geometry}
+\usepackage[top=0.7in, bottom=0.7in, left=0.85in,
+  right=0.85in]{geometry}
 
 \setmainfont[Ligatures=TeX,Scale=1.05]{Linux Libertine O}
 
@@ -26,89 +25,74 @@
 
 \begin{center}
   {\Large \bf Alexander R. Lange}\\[0.5em]
-  \begin{multicols}{2}
-    {\small 150 King St N, Waterloo, Ontario\\
-      USA: (585)$\:$469-6313 $\;\bullet\;$ Canada: (226)$\:$606-2572}
-    \columnbreak
-
+    {\small 710 Laurel Ave, San Mateo, CA 94401 $\;\bullet\;$
+      (585)$\:$469-6313}\\
     {\small
-      {\tt\href{mailto:alange@uwaterloo.ca}{alange@uwaterloo.ca}}
-      $\;\bullet\;$
-      {\tt\href{http://www.alexlange.co/}{alexlange.co}}}\\
-    \faLinkedinSign 
-    {\small
-      $\;${\tt\href{https://www.linkedin.com/in/alexrlange}{alexrlange}} 
+      {\tt\href{mailto:alexlange257@gmail.com}{alexlange257@gmail.com}}
       $\;\bullet\;$}
-    \faGithub 
-    {\small $\;${\tt\href{https://github.com/arlange}{arlange}} $\;\bullet\:$}
-    \faTwitter 
+    \faLinkedinSquare
     {\small
-      $\;${\tt\href{https://twitter.com/alalexlalange}{@alalexlalange}}}
-  \end{multicols}
+      $\;${\tt\href{https://www.linkedin.com/in/alexrlange}{alexrlange}}
+%      $\;\bullet\;$}
+%    \faGithub
+%    {\small $\;${\tt\href{https://github.com/arlange}{arlange}}
+  }
 \end{center}
 
-\vspace*{-1.5em}
+\vspace*{-1em}
 
-\ressec{Education}
+\ressec{Summary}
+\vspace*{0.25em}
+\begin{tightcenter}
+Backend software engineer with a strong mathematics background and experience researching,
+developing, and maintaining web APIs and computer vision/machine learning pipelines.
+\end{tightcenter}
 
 \vspace*{-0.25em}
-
-\resentry{\bf University of Waterloo}{Waterloo, ON}
-\resentry{MMath, Combinatorics and Optimization}{May 2015}
-\begin{reslist}
-  \item Thesis: \emph{Approximation Algorithms for Graph Protection Problems}
-  \item Concentration: Discrete Optimization, Approximation Algorithms
-\end{reslist}
-
-\vspace*{0.25em}
-
-\resentry{\bf \rit}{Rochester, NY}
-\resentry{M.S. Computer Science}{August 2013}
-\begin{reslist}
-  \item Thesis: \emph{Solving Hard Graph Problems with Combinatorial
-    Computing and Optimization}
- \item GPA: 4.0, concentration: Theoretical Computer Science
-\end{reslist}
-
-\resentry{B.S. Computational Mathematics}{May 2011}
-
-\vspace*{-0.5em}
-
-%\emph{Areas of Interest:} algorithms, combinatorial computing,
-%discrete optimization, graph theory
 
 \ressec{Experience}
 
 \vspace*{-0.25em}
 
+\resentry{{\bf Neurotrack}}{Redwood City, CA}
+\resentry{{\it Software Engineer}}{June 2015 -- present}
+\begin{reslist}
+  \item Researched. developed, and brought to production a webcam eye-gaze estimation tool for measuring subconscious novelty preference.
+  Included initial prototyping and analysis, cross validation, feature selection, model architecture, and internal tools to manually evaluate and accept/reject results.
+    \textcolor{darkgray}{\textbf{[}\textsf{Python}, \textsf{Django}, \textsf{OpenCV}, \textsf{scikit-learn}, \textsf{dlib}\textbf{]}}
+  \item Developed, brought to production, and maintained backend RESTful APIs and full-stack web applications for projects including a
+    consumer health app and a platform for deploying research studies involving company's tests.\\
+    \textcolor{darkgray}
+    {\textbf{[}\textsf{Python}, \textsf{Django}, \textsf{Postgres}, \textsf{Celery}, \textsf{Redis}, \textsf{Docker},
+    \textsf{AWS}, some \textsf{Javascript}, \textsf{React}\textbf{]}}
+  \item Researched and developed fixation/saccade detection algorithm, classifier to judge noisiness,
+     and other analysis tools for
+     raw eye-tracking data. \textcolor{darkgray}{\textbf{[}\textsf{Python}, \textsf{scikit-learn}, \textsf{numpy}\textbf{]}}
+  \item Engineering liaison between company and clinical studies. Developed, deployed, and supported software on remote laptops.
+     Improved company's remote data syncing process.
+\end{reslist}
+
+\vspace*{0.25em}
+
 \resentry{{\bf Google}}{Mountain View, CA}
 \resentry{{\it Software Engineer in Test Intern}}{September 2014 --
   December 2014}
 As part of the \textsf{Ads Backend Engineering Productivity} team, I worked on the following
-projects (all coding in \textsf{Python}):
+projects \textcolor{darkgray}{\textbf{[}all coding in \textsf{Python}\textbf{]}}:
 \begin{reslist}
-  \item Release automation for Mesa, the large, distributed data
-    warehousing system for all advertising statistics. This system
-    has over 20 binaries and 5 release groups. Main challenges
-    included learning internal tools and libraries, and designing a
-    workflow that met both the requirements of the release groups and
-    the needs of the engineers.
-  \item Improving engineer's workflow for a submission process with
-    high contention affecting multiple teams. The problem escalated
-    during my internship. Attended design meetings and developed tools
-    for the first stages of the solution, including the automation of
-    generating new golden files and diff reporting them against 
-    old ones.
-\end{reslist} 
+  \item Designed and developed a release automation workflow for the distributed data
+    warehousing system of ads stats.
+  \item Developed tools for the first stages of improving the code submission process
+    of a particular team. Automated the generation of new golden files and diff reporting against
+    older golden files.
+\end{reslist}
 
 \vspace*{0.25em}
 
 \resentry{{\bf University of Waterloo}}{Waterloo, ON}
-\resentry{{\it Research Assistant}}{September 2013 -- August 2014}
-Assisting Prof. Chaitanya Swamy on the design of approximation algorithms
-for stochastic optimization problems, including a problem involving
-partitioning a graph to protect valuable nodes against stochastically located
-threats. 
+\resentry{{\it Research Assistant, Prof. Chaitanya Swamy}}{September 2013 -- May 2015}
+Assisted in the design of approximation algorithms
+for stochastic optimization problems.
 
 %\resentry{{\it Teaching Assistant}}{September 2013 -- present}
 %Ran tutorials, managed undergraduate markers, and marked assignments
@@ -116,75 +100,93 @@ threats.
 %Math for Engineers.
 
 \vspace*{0.25em}
- 
-\resentry{{\bf \rit}}{Rochester, NY} \resentry{{\it Research
-    Assistant}}{January 2012 -- August 2013} Assisted Prof. Stanis{\l}aw
-Radziszowski in research involving computational Ramsey
-Theory. Developed a robust C++ library to generate, enumerate,
-manipulate, and test graphs for a variety of Ramsey properties. Led to
-publications [1,2], the work of the latter made use of the Open
-Science Grid for approximately 200,000 CPU hours of computation.
+
+\resentry{{\bf \rit}}{Rochester, NY}
+\resentry{{\it Research Assistant, Prof. Stanis{\l}aw Radziszowski}}{January 2012 -- August 2013}
+Designed and developed a robust library to generate, enumerate,
+manipulate, and test graphs for a variety of Ramsey properties.
+Deployed on the \emph{Open Science Grid}, using \textasciitilde 200,000 CPU hours.
+Resulted in two publications. \textcolor{darkgray}{\textbf{[}\textsf{C++}\textbf{]}}
 
 \vspace*{0.25em}
 
-\resentry{{\bf Bell and Howell / BCC Software}}{Rochester, NY} \resentry{{\it
-    Software Engineer Intern}}{June 2013 -- September 2013} Researched
-XML specification for company's new product feature, and developed
-a prototype of the feature in Python, making use of schema bindings
-and web services.  Documented all data and information as part of
-design document.
-
+\resentry{{\bf Bell and Howell / BCC Software}}{Rochester, NY}
+\resentry{\textit{Software Engineer Intern}}{June 2013 -- September 2013}
 \resentry{\textit{Software Test Specialist/Quality Assurance
     Intern}}{June 2010 -- November 2011}
+
+\vspace*{0.25em}
+
+\ressec{Education}
+
+\vspace*{-0.25em}
+
+\resentry{\bf University of Waterloo}{Waterloo, ON}
+\resentry{Master of Mathematics in Combinatorics and Optimization
+  $\:$\textcolor{darkgray}{(concentration in Discrete Optimization)}
+}{May 2015}
 \begin{reslist}
-  \item Fully responsible for data and data quality
-    testing. Participated in the development of a new procedure that
-    improved quality metrics by producing and processing reports
-    automated through scripts and spreadsheets.
-%  \item Lead tester of new feature: created and followed a test plan,
-%    tested change requests, participated in design reviews.
-  \item Developed a new automated regression test library in Python
-    and shell scripts for specific customer use cases.
-%  \item Various testing responsibilities, including unit, performance, and
-%    installation testing.
+  \item Thesis: \emph{Approximation Algorithms for Graph Protection Problems}
 \end{reslist}
 
-\ressec{Computer Skills}
+\vspace*{0.25em}
 
+\resentry{\bf \rit}{Rochester, NY}
+\resentry{Master of Science in Computer Science
+  $\:$\textcolor{darkgray}{(concentration in Theory)}}{August 2013}
 \begin{reslist}
-\item Proficient in Java, C++, Python, \LaTeX, {\sc Matlab}
-\item Experience with C\#, SQL, .NET, Visual Studio, Mono, MIPS Assembly, shell scripting
+  \item Thesis: \emph{Solving Hard Graph Problems with Combinatorial
+    Computing and Optimization}
+  \item Computer Science Outstanding Graduate Student Award, 2012--2013
+  \item Placed 3rd out of 12 in the {\bf ACM-ICPC} Northeast North America Regional Finals, Fall 2012
 \end{reslist}
 
-\vspace*{-0.5em}
+\vspace*{0.25em}
 
-\ressec{Academic Awards and Achievements}
-\begin{reslist}
-  \item RIT Computer Science Outstanding Graduate Student Award, 2012--2013
-  \item Placed 3rd out of 12 in the {\bf ACM-ICPC} Northeast North America
-Regional Finals, Fall 2012
-  \item Golisano College of Computer and Information Sciences Research
-    Seed Funding, 2012 and 2013
-  %\item RIT Computer Science Graduate Delegate, nominated, Fall 2012
-  \item RIT Presidential Scholarship, 2007--2011; RIT Honors Program,
-    2007--2010%; RIT Dean’s List, 2007--2011
-\item {Publications}:\\[-1.75em]
-\begin{enumerate}{\footnotesize \renewcommand{\theenumi}{[\arabic{enumi}]}
-  \renewcommand{\labelenumi}{\theenumi}
-  {\partopsep=0pt \topsep=0pt \leftmargin=0em \parskip=0pt}
-  \setlength{\labelsep}{2pt}
-  \setlength{\itemsep}{-3pt}
-  \item A. Lange, S. Radziszowski, and X. Xu. Use of MAX-CUT for Ramsey
-    Arrowing of Triangles. \emph{Journal of Combinatorial Mathematics
-      and Combinatorial Computing}. \textbf{88} (2014) 61--71.
-  \item A. Lange, I. Livinsky, and S. Radziszowski. Computation of the
-      Ramsey Numbers $R(C_4,K_9)$ and $R(C_4,K_{10})$. \emph{accepted}.}
-\end{enumerate}
-\end{reslist}
+\resentry{Bachelor of Science in {Computational Mathematics}}{May 2011}
+
+\vspace*{0.25em}
+
+\textbf{Languages/Tools Used}:
+  \textcolor{darkgray}{
+    Java, C++, Python, \LaTeX, {\sc Matlab}, SQL, C\#, .NET, Visual Studio, MIPS Assembly
+  }
+
+
+% \ressec{Skills}
+
+% \begin{reslist}
+% \item Proficient in Python, \LaTeX, {\sc Matlab}
+% \item Academic experience with Java, C++, C\#, SQL, .NET
+% \end{reslist}
 
 
 
+% \vspace*{-0.5em}
 
+% \ressec{Academic Awards and Achievements}
+% \begin{reslist}
+%   \item RIT Computer Science Outstanding Graduate Student Award, 2012--2013
+%   \item Placed 3rd out of 12 in the {\bf ACM-ICPC} Northeast North America
+% Regional Finals, Fall 2012
+%   \item Golisano College of Computer and Information Sciences Research
+%     Seed Funding, 2012 and 2013
+%   %\item RIT Computer Science Graduate Delegate, nominated, Fall 2012
+%   \item RIT Presidential Scholarship, 2007--2011; RIT Honors Program,
+%     2007--2010%; RIT Dean’s List, 2007--2011
+% \item {Publications}:\\[-1.75em]
+% \begin{enumerate}{\footnotesize \renewcommand{\theenumi}{[\arabic{enumi}]}
+%   \renewcommand{\labelenumi}{\theenumi}
+%   {\partopsep=0pt \topsep=0pt \leftmargin=0em \parskip=0pt}
+%   \setlength{\labelsep}{2pt}
+%   \setlength{\itemsep}{-3pt}
+%   \item A. Lange, S. Radziszowski, and X. Xu. Use of MAX-CUT for Ramsey
+%     Arrowing of Triangles. \emph{Journal of Combinatorial Mathematics
+%       and Combinatorial Computing}. \textbf{88} (2014) 61--71.
+%   \item A. Lange, I. Livinsky, and S. Radziszowski. Computation of the
+%       Ramsey Numbers $R(C_4,K_9)$ and $R(C_4,K_{10})$. \emph{accepted}.}
+% \end{enumerate}
+% \end{reslist}
 
 %% \item {\bf Conference Presentations}: {\footnotesize 25th Cumberland Conf. on
 %%   Combinatorics, Graph Theory, \& Computing, Johnson City, TN, May
