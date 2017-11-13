@@ -1,0 +1,58 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{arlres2}
+
+
+\RequirePackage{microtype}
+\RequirePackage{color}
+%\RequirePackage{libertineotf}
+  
+%\RequirePackage[T1]{fontenc}
+%\RequirePackage[urw-garamond]{mathdesign}
+%\RequirePackage[scaled]{helvet}
+
+% \renewcommand*\familydefault{\sfdefault}
+
+\definecolor{greyt}{RGB}{180,180,180}
+
+%\renewcommand\arraystretch{1}
+
+\thispagestyle{empty}
+
+\newcommand{\ressec}[1]
+{
+\begin{center} \vspace{-7pt}\rule[-2pt]{\linewidth}{1.2pt}\\
+{{\bf \uppercase {#1}}} \\
+{\color{greyt} \rule[8pt]{\linewidth}{1pt}}\vspace*{-.6pc}
+\end{center}
+\vspace*{-1em}
+}
+
+\newcommand{\rit}{Rochester Institute of Technology}
+
+\newenvironment{reslist}
+{\begin{list}{\bt}{\partopsep=0pt \topsep=2pt \leftmargin=1.1em \parskip=0pt}
+\setlength{\labelsep}{2pt}
+\setlength{\itemsep}{-1pt}}
+{\end{list}\vspace{-.4em}}
+
+\newcommand{\resentry}[2]{
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} @{}l r@{}}
+{#1} & \textit{\small{#2}} \end{tabular*}}
+
+
+\newcommand{\resdes}[1]{ & {#1} \\ \\}
+
+\newcommand{\bt}{$\bullet$ }
+
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+
+%\newcommand{\ress}[1]
+%{\rule[-5pt]{\linewidth}{1pt}\vspace*{-1pt}
+%\colorbox{greyt}{\begin{minipage}{\linewidth}{\vspace*{2pt}\textls[100]{\bf \upp%ercase {#1} }} \vspace*{3pt}\end{minipage}}\\ }
+%\vspace*{-1pt}\rule[7pt]{\linewidth}{.5pt}
